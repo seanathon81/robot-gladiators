@@ -94,7 +94,7 @@ for (var i = 0; i < enemyNames.length; i++) {
 
     // pass the pickedEnemyName variable's value into the fight function, where it will assume the value of the enemyName parameter
     fight(pickedEnemyName);
-  }
+  
 
     if (playerHealth > 0 && i < enemyNames.length -1) {
     var storeConfirm = window. confirm("The fight is over, visit the store before the next round?");
@@ -103,6 +103,7 @@ for (var i = 0; i < enemyNames.length; i++) {
      shop()
   }
 }
+}
   
   // if player isn't alive, stop the game
   else {
@@ -110,15 +111,14 @@ for (var i = 0; i < enemyNames.length; i++) {
     break;
   }
 }
-  //play again
-  startGame()
-  // after the loop ends, player is either out of health or enemies to fight
+    // after the loop ends, player is either out of health or enemies to fight
   endGame();
 };
 
 
 // function to end the entire game
 var endGame = function() {
+  window.alert("The Game has now ended. Let's see how you did!")
   // if player is still alive, player wins!
   if (playerHealth > 0) {
     window.alert("Great job, you've survived the game!")
